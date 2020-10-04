@@ -23,8 +23,8 @@ void movieEvent(Movie m) {
     float r = red(myMovie.pixels[loc]);
     float g = green(myMovie.pixels[loc]);
     float b = blue(myMovie.pixels[loc]);
-    float prom = r*0.299+g*0.587+b*0.114;
-    pixels[loc]=color(prom,prom,prom);
+    float prom = (r+g+b)/3;
+      pixels[loc]=color(prom,prom,prom);
     }
   }
   updatePixels();
