@@ -1,6 +1,5 @@
 PGraphics pg;
 
-String [] fuentesEnergia = {"petroleo", "Carbon"};
 int[] data = new int[256];
 PImage image;
 int mayor=0;
@@ -8,15 +7,15 @@ int mayor=0;
 void setup() {
   size(900, 600);
   pg = createGraphics(800, 500);
-  image = loadImage("hzd.jpeg");
+  image = loadImage("test.jpeg");
 }
 
 void draw() {
   loadPixels();
   image.loadPixels();
-  for( int x=0; x< width; x++){
-    for(int y =0; y< height; y++){
-      int loc = x+y*width;
+  for( int x=0; x< image.width; x++){
+    for(int y =0; y< image.height; y++){
+      int loc = x+y*image.width;
       float r = red(image.pixels[loc]);
       float g = green(image.pixels[loc]);
       float b = blue(image.pixels[loc]);
